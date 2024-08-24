@@ -1,0 +1,7 @@
+version: '3.4'
+services:
+  serialkeygenerate:
+    image: ${DOCKER_REGISTRY-}serialkeygenerate
+    build:
+      context: .
+      dockerfile: Dockerfile
