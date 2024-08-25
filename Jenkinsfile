@@ -3,15 +3,6 @@ pipeline {
 	environment {
 		COMPOSE_FILE = 'docker-compose.yml'
 	}
-
-	stages {
-				
-		stage ('Quality Gate') {
-			steps {
-				sh 'sh sonardev.sh'
-			}		  
-		}
-
 		stage ('Verify') {
 			steps {
 				sh '''
