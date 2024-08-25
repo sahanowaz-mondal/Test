@@ -3,6 +3,7 @@ pipeline {
 	environment {
 		COMPOSE_FILE = 'docker-compose.yml'
 	}
+	stages {
 		stage ('Verify') {
 			steps {
 				sh '''
