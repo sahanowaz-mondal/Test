@@ -1,7 +1,11 @@
 version: '3.4'
 services:
   serialkeygenerate:
-    image: ${DOCKER_REGISTRY-}serialkeygenerate
-    build:
-      context: .
+    build: 
+      context: ./
       dockerfile: Dockerfile
+    restart: always
+    expose:
+     - "8088"
+    ports:
+     - "8088:80"
