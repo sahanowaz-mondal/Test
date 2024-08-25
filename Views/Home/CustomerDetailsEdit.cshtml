@@ -1,0 +1,63 @@
+﻿@model SerialKeyGenerate.Models.CustomerActiveDetails
+
+@{
+    ViewData["Title"] = "Edit Entry";
+}
+
+<div class="container">
+    <h1 class="my-4">Softaware Validity Edit</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <form asp-action="CustomerDetailsEdit">
+                <div class="form-group">
+                    <label asp-for="client_name " class="control-label"></label>
+                    <input asp-for="client_name" class="form-control" />
+                    <span asp-validation-for="client_name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="software_name" class="control-label"></label>
+                    <input asp-for="software_name" class="form-control" />
+                    <span asp-validation-for="software_name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="db_name" class="control-label"></label>
+                    <input asp-for="db_name" class="form-control" />
+                    <span asp-validation-for="db_name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="start_date" class="control-label"></label>
+                    <input asp-for="start_date" type="date" class="form-control" />
+                    <span asp-validation-for="start_date" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="end_date" class="control-label"></label>
+                    <input asp-for="end_date" type="date" class="form-control" />
+                    <span asp-validation-for="end_date" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="print_report" class="control-label"></label>
+                    <input asp-for="print_report" class="form-control" />
+                    <span asp-validation-for="print_report" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="isactive" class="control-label"></label>
+                    <select asp-for="isactive" class="form-control">
+                        <option value="true">Active</option>
+                        <option value="false">Inactive</option>
+                    </select>
+                    <span asp-validation-for="isactive" class="text-danger"></span>
+                </div>
+                <div class="form-group text-right mt-4">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                    <a asp-action="Entry" class="btn btn-secondary ml-2">Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Add script references if not already included in your layout -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-pzjw8f+ua7Kw1TIqI6j6M6L02+7v/j8TF3uY4zJ9fL+M67g5zTTRVJKgY6f2GpY8" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4Ag1QSSkEjozyWdfb8/jZ3b7x7iRXFJ5mipVbC48b4UYA5G3aeR6" crossorigin="anonymous"></script>
